@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Rentals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rentals</h2>
+
+<table id="rentals" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Customer Name</th>
+        <th>Movie Name</th>
+        <th>Date Rented</th>
+        <th>Date Returned</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#rentals").DataTable({
+                ajax: {
+                    url: "/api/rentals",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "customer.name",
+                        render: function (data, type, rental) {
+                            return "<a href='/customer/details/" + rental.customer.id + "'>" + rental.customer.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "movie.name"
+                    },
+                    {
+                        data: "dateRented",
+                        render: function (data, type, rental) {
+                            var date = new Date(Date.parse(rental.dateRented));
+                            return date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + (date.getUTCDate());
+                        }
+                    },
+                    {
+                        data: "dateReturned",
+                        render: function (data, type, rental) {
+                            if (rental.dateReturned) {
+                                var date = new Date(Date.parse(rental.dateReturned));
+                                return date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + (date.getUTCDate());
+                            }
+                            return "";
+                        }
+                    }
+                ]
+            });
+
+        });
+    </script>
+}

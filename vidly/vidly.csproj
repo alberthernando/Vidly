@@ -568,6 +568,7 @@
     <Content Include="Views\Movie\MovieForm.cshtml" />
     <Content Include="Views\Movie\ReadOnlyList.cshtml" />
     <Content Include="Views\Rental\New.cshtml" />
+    <Content Include="Views\Rental\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
