@@ -19,8 +19,8 @@ h2, .h2 {
 }
 
 .navbar-inverse {
-    background-color: #FF3B77;
-    border-color: #FF8598;
+    background-color: #1E2040;
+    border-color: #303E8C;
     color: #fff;
 }
 
@@ -41,12 +41,12 @@ h2, .h2 {
     }
 
         .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-            color: #860D32;
+            color: #7395D9;
             background-color: transparent;
         }
 
 a, .btn-link {
-    color: #09A7E4;
+    color: #4E71D9;
 }
 
 .btn {
@@ -58,20 +58,20 @@ a, .btn-link {
 
 .btn-primary {
     color: #ffffff;
-    background-color: #52656B;
+    background-color: #4E71D9;
     border: 0;
     padding: 8px 20px;
 }
 
     .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-        color: #52656B;
-        background-color: #CDFF00;
+        color: #D9A74A;
+        background-color: #4E71D9;
     }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
     color: #ffffff;
-    background-color: #52656B;
-    border-color: #52656B;
+    background-color: #18298C;
+    border-color: #18298C;
 }
 
 .pagination > li > a, .pager > li > a, .pagination > li > span, .pager > li > span {
@@ -97,5 +97,5 @@ table a:not(.btn), .table a:not(.btn) {
     .form-control:focus {
         -webkit-box-shadow: none;
         box-shadow: none;
-        border: 2px solid #FF8598;
+        border: 2px solid #F2CF1D;
     }
